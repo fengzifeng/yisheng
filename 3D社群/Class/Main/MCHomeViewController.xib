@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MCHomeViewController">
+            <connections>
+                <outlet property="_tabLineLabel" destination="QfG-fB-d2M" id="yg4-R4-eMT"/>
+                <outlet property="tabBarView" destination="5xz-vX-e5j" id="d3h-FQ-P7G"/>
+                <outlet property="unreadPlate" destination="XTj-aJ-6Tf" id="tER-an-7kS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="tabButtonCollection" destination="MaT-MA-YCZ" id="sc1-cQ-lMN"/>
+                <outletCollection property="tabButtonCollection" destination="fiL-ry-Tbq" id="lTl-rh-L6A"/>
+                <outletCollection property="tabButtonCollection" destination="64W-A1-2eB" id="dOc-Zb-u9k"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfG-fB-d2M">
+                    <rect key="frame" x="0.0" y="617" width="375" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="NjS-zS-HRW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.78431372549019607" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xz-vX-e5j">
+                    <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aS5-Mo-l8p">
+                            <rect key="frame" x="0.0" y="0.0" width="125" height="49"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaT-MA-YCZ" customClass="MCHVButton">
+                                    <rect key="frame" x="30.5" y="0.0" width="64" height="49"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="64" id="7p6-5l-Pyt"/>
+                                        <constraint firstAttribute="height" constant="49" id="meh-Na-oAh"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <state key="normal" title="首页" image="main_tabBar_new_normal.png">
+                                        <color key="titleColor" red="0.60271793603897095" green="0.602699875831604" blue="0.60271012783050537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <state key="selected" image="main_tabBar_new_highlight.png">
+                                        <color key="titleColor" red="0.66666666669999997" green="0.1764705882" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <state key="highlighted" image="main_tabBar_new_highlight.png">
+                                        <color key="titleColor" red="0.66666666666666663" green="0.1764705882352941" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="tabButtonAction:" destination="-1" eventType="touchUpInside" id="Kaw-pL-Ueu"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="MaT-MA-YCZ" firstAttribute="centerX" secondItem="aS5-Mo-l8p" secondAttribute="centerX" id="4YQ-Te-Xsj"/>
+                                <constraint firstAttribute="height" constant="49" id="a4F-Le-Zci"/>
+                                <constraint firstAttribute="bottom" secondItem="MaT-MA-YCZ" secondAttribute="bottom" id="yrs-JQ-ndz"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fcs-sR-TNJ">
+                            <rect key="frame" x="125" y="0.0" width="125" height="49"/>
+                            <subviews>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiL-ry-Tbq" customClass="MCHVButton">
+                                    <rect key="frame" x="30.5" y="0.0" width="64" height="49"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="64" id="TbM-4R-xKO"/>
+                                        <constraint firstAttribute="height" constant="49" id="uYH-6b-aMI"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <state key="normal" title="健康视频" image="main_tabBar_plate_normal.png">
+                                        <color key="titleColor" red="0.60271793600000001" green="0.60269987579999995" blue="0.6027101278" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <state key="selected" image="main_tabBar_plate_highlight.png">
+                                        <color key="titleColor" red="0.66666666669999997" green="0.1764705882" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <state key="highlighted" image="main_tabBar_plate_highlight.png">
+                                        <color key="titleColor" red="0.66666666669999997" green="0.1764705882" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="tabButtonAction:" destination="-1" eventType="touchUpInside" id="aEK-7m-yAd"/>
+                                    </connections>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XTj-aJ-6Tf">
+                                    <rect key="frame" x="70.5" y="3" width="8" height="8"/>
+                                    <color key="backgroundColor" red="1" green="0.0" blue="0.2181982177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="8" id="3Nt-pL-w2Q"/>
+                                        <constraint firstAttribute="width" constant="8" id="AYv-tn-Hj3"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="XTj-aJ-6Tf" firstAttribute="top" secondItem="Fcs-sR-TNJ" secondAttribute="top" constant="3" id="1SM-Ad-xuQ"/>
+                                <constraint firstItem="fiL-ry-Tbq" firstAttribute="centerX" secondItem="Fcs-sR-TNJ" secondAttribute="centerX" id="JWe-rK-up2"/>
+                                <constraint firstItem="XTj-aJ-6Tf" firstAttribute="centerX" secondItem="Fcs-sR-TNJ" secondAttribute="centerX" constant="12" id="dJq-em-jXW"/>
+                                <constraint firstAttribute="bottom" secondItem="fiL-ry-Tbq" secondAttribute="bottom" id="tPN-dn-tSs"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mep-we-1wi">
+                            <rect key="frame" x="250" y="0.0" width="125" height="49"/>
+                            <subviews>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64W-A1-2eB" customClass="MCHVButton">
+                                    <rect key="frame" x="30.5" y="0.0" width="64" height="49"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="64" id="May-ee-DzD"/>
+                                        <constraint firstAttribute="height" constant="49" id="tgK-Hg-eim"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                    <state key="normal" title="健康咨询" image="main_tabBar_me_normal.png">
+                                        <color key="titleColor" red="0.60271793600000001" green="0.60269987579999995" blue="0.6027101278" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <state key="selected" image="main_tabBar_me_highlight.png">
+                                        <color key="titleColor" red="0.66666666669999997" green="0.1764705882" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <state key="highlighted" image="main_tabBar_me_highlight.png">
+                                        <color key="titleColor" red="0.66666666669999997" green="0.1764705882" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="tabButtonAction:" destination="-1" eventType="touchUpInside" id="uAd-wg-z6S"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="64W-A1-2eB" firstAttribute="centerX" secondItem="Mep-we-1wi" secondAttribute="centerX" id="MPR-lD-IOk"/>
+                                <constraint firstAttribute="bottom" secondItem="64W-A1-2eB" secondAttribute="bottom" id="NjY-Yk-mDL"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Mep-we-1wi" firstAttribute="width" secondItem="aS5-Mo-l8p" secondAttribute="width" id="Env-ky-LdG"/>
+                        <constraint firstItem="aS5-Mo-l8p" firstAttribute="leading" secondItem="5xz-vX-e5j" secondAttribute="leading" id="GYa-AP-JRy"/>
+                        <constraint firstItem="Fcs-sR-TNJ" firstAttribute="width" secondItem="aS5-Mo-l8p" secondAttribute="width" id="I55-DY-k7E"/>
+                        <constraint firstItem="Fcs-sR-TNJ" firstAttribute="top" secondItem="5xz-vX-e5j" secondAttribute="top" id="I6o-ji-dxz"/>
+                        <constraint firstItem="Fcs-sR-TNJ" firstAttribute="height" secondItem="aS5-Mo-l8p" secondAttribute="height" id="JCn-vH-eBb"/>
+                        <constraint firstAttribute="height" constant="49" id="OMK-Xh-A5U"/>
+                        <constraint firstItem="aS5-Mo-l8p" firstAttribute="top" secondItem="5xz-vX-e5j" secondAttribute="top" id="PNo-CN-dTk"/>
+                        <constraint firstItem="Mep-we-1wi" firstAttribute="height" secondItem="aS5-Mo-l8p" secondAttribute="height" id="R0B-y1-CAJ"/>
+                        <constraint firstItem="Fcs-sR-TNJ" firstAttribute="leading" secondItem="aS5-Mo-l8p" secondAttribute="trailing" id="ZfD-bf-sni"/>
+                        <constraint firstAttribute="trailing" secondItem="Mep-we-1wi" secondAttribute="trailing" id="fYP-nk-IfR"/>
+                        <constraint firstItem="Mep-we-1wi" firstAttribute="top" secondItem="5xz-vX-e5j" secondAttribute="top" id="nzu-fl-pcL"/>
+                        <constraint firstItem="Mep-we-1wi" firstAttribute="leading" secondItem="Fcs-sR-TNJ" secondAttribute="trailing" id="rvX-XP-NZH"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5xz-vX-e5j" secondAttribute="trailing" id="FB9-Gf-vsq"/>
+                <constraint firstAttribute="trailing" secondItem="QfG-fB-d2M" secondAttribute="trailing" id="Fhu-rc-auv"/>
+                <constraint firstItem="5xz-vX-e5j" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XWH-7A-cfs"/>
+                <constraint firstAttribute="bottom" secondItem="5xz-vX-e5j" secondAttribute="bottom" id="bel-vQ-VEx"/>
+                <constraint firstItem="5xz-vX-e5j" firstAttribute="top" secondItem="QfG-fB-d2M" secondAttribute="bottom" id="cbC-74-PKc"/>
+                <constraint firstItem="QfG-fB-d2M" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oAE-lD-gpd"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="main_tabBar_me_highlight.png" width="46" height="45"/>
+        <image name="main_tabBar_me_normal.png" width="46" height="45"/>
+        <image name="main_tabBar_new_highlight.png" width="46" height="45"/>
+        <image name="main_tabBar_new_normal.png" width="46" height="45"/>
+        <image name="main_tabBar_plate_highlight.png" width="46" height="45"/>
+        <image name="main_tabBar_plate_normal.png" width="46" height="45"/>
+    </resources>
+</document>
